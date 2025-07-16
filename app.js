@@ -7,7 +7,7 @@ const { Buffer } = require('buffer');
 const { exec, execSync } = require('child_process');
 
 // 环境变量
-const UUID = process.env.UUID || '4734fa2d-fbb1-419d-bdd6-cb0ce5737121'; // 使用哪吒v1，在不同的平台部署需修改UUID，否则会覆盖
+const UUID = process.env.UUID || 'e35ea6d0-d2de-4b06-bda6-f81b33ef30e5'; // 使用哪吒v1，在不同的平台部署需修改UUID，否则会覆盖
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';       // 哪吒v1填写形式：nz.abc.com:8008   哪吒v0填写形式：nz.abc.com
 const NEZHA_PORT = process.env.NEZHA_PORT || '';           // 哪吒v1没有此变量，v0的agent端口为{443,8443,2096,2087,2083,2053}其中之一时开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';             // v1的NZ_CLIENT_SECRET或v0的agent端口  
