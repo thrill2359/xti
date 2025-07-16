@@ -1,15 +1,19 @@
 name: Build and Push Docker Image
 
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 */2 * *'  # UTC 21:00  UTC+8 05:00
   push:
-    branches: [ main ]
     paths:
       - 'Dockerfile'
       - 'app.js'
       - 'package.json'
   pull_request:
-    branches: [ main ]
-  workflow_dispatch:
+    paths:
+      - 'Dockerfile'
+      - 'app.js'
+      - 'package.json'
 
 jobs:
   build:
